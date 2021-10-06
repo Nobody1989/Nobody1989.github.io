@@ -6,13 +6,14 @@ top: 200px;
 left:525px;
 }
 Body{
-    background-image: url(https://img.freepik.com/free-photo/bokeh-abstract-blurred-orange-yellow-beautiful-background_51768-60.jpg?size=626&ext=jpg ) ;
+    background-image: url(https://dbdzm869oupei.cloudfront.net/img/alfombretaratoli/preview/21281.png
+     ) ;
     background-repeat: no-repeat, repeat;
     background-size: cover; 
 }
 h1 {
-    color:gold;
+    color:rgb(0, 60, 255);
 }
 h2{
-    color:gold;
+    color:rgb(0, 38, 255);
 }
