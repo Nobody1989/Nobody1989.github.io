@@ -38,7 +38,7 @@ nav a {
 
 /* main container area beneath menu */
 main {
-    background: rgb(0, 0, 0);
+    background-image:-webkit-linear-gradient(right,darksalmon,transparent);
     display: flex;
 }
 .sidebar {
@@ -77,3 +77,4 @@ av {
     display: flex;
     padding: 10px;
 }
+

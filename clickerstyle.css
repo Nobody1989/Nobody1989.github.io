@@ -4,7 +4,9 @@ Body{
     background-size: cover; 
 }
 p{
-    color: blue;
+    color: rgb(255, 255, 255);
+    
+
 }
 img {
     height:300px;
@@ -14,6 +16,6 @@ img {
     left:540px;
 }
 h1{
-    color:Blue;
+    color:rgb(255, 255, 255);
 }
     
