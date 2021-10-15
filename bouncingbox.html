@@ -10,6 +10,11 @@
 </html>
 <script>
   var box = document.getElementById("box")
-  box.style.left = "100px"
-  
+   setInterval(update,50)
+   var x= 100
+  function update(){
+      box.style.left = x + "px"
+    x= x + 5
+
+  }
 </script>
