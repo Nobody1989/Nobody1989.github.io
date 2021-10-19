@@ -12,16 +12,31 @@
   var box = document.getElementById("box")
    setInterval(update,50)
    var x= 100
-   var speed = 100
+   var y=100
+   var speed = 5
+   var speedy = 5
+  
   
   function update(){
       box.style.left = x + "px"
+      box.style.top = y+"px"
        x= x + speed
+       y= y +speedy
        if(x>= window.innerWidth){
-              speed = -100
-       } else if(x<=0){
-         speed= 100
+              speed= speed +5
+        speed = -speed
+       } 
+       if(x<=0){
+         speed= -speed
        }
+
+        if (y>=window.innerHeight){
+          speedy=speedy +5
+          speedy=-speedy
+        }
+        if(y<=0) {
+             speedy=-speedy
+        }
        
   }
 </script>
