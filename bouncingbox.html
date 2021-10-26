@@ -10,6 +10,8 @@
 </html>
 <script>
   var box = document.getElementById("box")
+  box.addEventListener("click",boxclick)
+
    setInterval(update,50)
    var x= 100
    var y=100
@@ -23,7 +25,7 @@
        x= x + speed
        y= y +speedy
        if(x>= window.innerWidth){
-              speed= speed +5
+              speed= speed
         speed = -speed
        } 
        if(x<=0){
@@ -31,7 +33,7 @@
        }
 
         if (y>=window.innerHeight){
-          speedy=speedy +5
+          speedy=speedy
           speedy=-speedy
         }
         if(y<=0) {
@@ -39,4 +41,15 @@
         }
        
   }
+function boxclick(){
+
+if(x<0){
+  speed=speed -5
+}
+if(x>0){
+ speed=speed +5
+}
+}
+
+  
 </script>
