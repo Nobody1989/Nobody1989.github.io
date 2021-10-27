@@ -2,19 +2,29 @@
 <html>
     <head>
         <link rel="stylesheet" href="clickerstyle.css">
+
+    </head>
+    <body>
+        <h1>Black Hole clicker</h1>
+        <p>clicker:<span id ="counter">0</span></p>
+        <img src= "https://www.transparentpng.com/thumb/black-hole/black-hole-png-12.png" id="blackhole" onclick = "increment()">
+
+    </body>
+
+   
+</html>
 <script>
     var clicks=0;
     function increment(){
         clicks=clicks+1;
         counter.innerHTML =clicks
     }
+    
+    var img= document.getElementById("blackhole")
+    img.addEventListener("click",imgclick)
+function imgclick(){
+    
+    
+}
+ var score =0
 </script>
-    </head>
-    <body>
-        <h1>Black Hole clicker</h1>
-        <p>clicker:<span id ="counter">0</span></p>
-        <img src= "https://www.transparentpng.com/thumb/black-hole/black-hole-png-12.png" id="cookie" onclick = "increment()">
-
-    </body>
-   
-</html>
