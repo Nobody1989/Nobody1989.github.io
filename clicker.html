@@ -6,25 +6,31 @@
     </head>
     <body>
         <h1>Black Hole clicker</h1>
-        <p>clicker:<span id ="counter">0</span></p>
-        <img src= "https://www.transparentpng.com/thumb/black-hole/black-hole-png-12.png" id="blackhole" onclick = "increment()">
-
+        <div id= "score">
+            score=0
+        </div>
+       
+        <img src= "https://www.transparentpng.com/thumb/black-hole/black-hole-png-12.png" id="blackhole">
+         
     </body>
 
    
 </html>
 <script>
-    var clicks=0;
-    function increment(){
-        clicks=clicks+1;
-        counter.innerHTML =clicks
-    }
-    
+
     var img= document.getElementById("blackhole")
     img.addEventListener("click",imgclick)
 function imgclick(){
-    
+       score=score +1;
+       document.getElementById("score").innerText="score"+score;
     
 }
- var score =0
+setInterval(update,500)
+ var score =0;
+ setInterval(update,500)
+ function update(){
+     score=score+1;
+     document.getElementById("Score").innerText="score"+score;
+ }
+
 </script>
