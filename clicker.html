@@ -9,6 +9,7 @@
         <div id= "score">
             score=0
         </div>
+        <button Id="stop"> Stop</button>
        
         <img src= "https://www.transparentpng.com/thumb/black-hole/black-hole-png-12.png" id="blackhole">
          
@@ -17,7 +18,8 @@
    
 </html>
 <script>
-
+      document.getElementById("stop").addEventListner("score",stop)
+      var upgradetoggle= ture
     var img= document.getElementById("blackhole")
     img.addEventListener("click",imgclick)
 function imgclick(){
@@ -29,8 +31,13 @@ setInterval(update,500)
  var score =0;
  setInterval(update,500)
  function update(){
-     score=score+1;
-     document.getElementById("Score").innerText="score"+score;
+     score=score+1
+     document.getElementById("score").innerText= "score"+score
+    
  }
+ function stop(){
+
+ }
+ 
 
 </script>
