@@ -9,7 +9,7 @@
         <div id= "score">
             score=0
         </div>
-        <button Id="upgrade"> upgrade</button>
+        <button id="upgrade"> upgrade</button>
        
         <img src= "https://www.transparentpng.com/thumb/black-hole/black-hole-png-12.png" id="blackhole">
          
@@ -19,9 +19,10 @@
 </html>
 <script>
       var scoreperinterval= 0;
+      document.getElementById("upgrade").addEventListener("click",upgrade)
        var score = 0;
-    var img= document.getElementById("blackhole")
-    img.addEventListener("click",imgclick)
+       var img= document.getElementById("blackhole")
+       img.addEventListener("click",imgclick)
     
 function imgclick(){
        score=score +1;
@@ -39,9 +40,22 @@ function imgclick(){
 
  
  function upgrade(){
-     scoreperinterval=scoreperintervl +score
-     document.getElementById("upgrade").innerText+"upgrade"+scoreperinterval
-    
+     if(score>25){
+          
+     scoreperinterval=scoreperinterval+1
+     }
+     if(score>50){
+         scoreperinterval= scoreperinterval +2
+     }
+     if(score>200){
+         scoreperinterval=scoreperinterval+10
+         if(score>500){
+             scroeperinterval=scoreperinterval +25
+         }
+            
+         
+     }
+
  }
  
  
