@@ -1,0 +1,27 @@
+body{
+    background-image:url(https://i.pinimg.com/736x/dc/71/1c/dc711cc4c3ebafcd21f2a61efe8fd6cd.jpg) ;
+ background-repeat: no-repeat,repeat;
+ background-size:cover;
+
+}
+img{
+    width:150px;
+    height:150px;
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  top:250px;
+  }
+  h1{
+    margin: auto;
+  width: 12%;
+  border: 0px solid red;
+  padding: 10px;
+  color:white;
+  font-size:40;
+  }
+  p{
+    color:white;
+    font-size: 20px;
+  }
