@@ -14,20 +14,30 @@ body{
   top:5px;
   }
   #jim{
-    width:100px;
-    height: 100px;
+    width:125px;
+    height: 125px;
+    position: absolute;
     top: 5px;
+    
   }
   #dwight{
-    height:100px;
-    width: 100px;
-    top:30px;
+    height:125px;
+    width: 125px;
+    position:absolute;
+    top:150px;
     
   }
    #stanley{
-         height:100px;
-         width:100px;
-         top:60px;
+         height:125px;
+         width:125px;
+         position:absolute;
+         top:300px;
+  }
+  #kevin{
+    height:125px;
+    width:125px;
+    position: absolute;
+    top:500px;
   }
   h1{
     margin: auto;
@@ -48,3 +58,47 @@ body{
     
 
   }
+  #jimcost{
+    position:absolute;
+    top: 5px;
+    left:150px;
+    color:white;
+    font-size: 20px;
+  }
+   #dwightcost{
+     color:white;
+     position: absolute;
+     top:150px;
+     left:150px;
+     font-size: 20px;
+   }
+   #stanleycost{
+     color:white;
+     position: absolute;
+     top:300px;
+     left:150px;
+     font-size: 20px;
+
+
+   }
+   #kevincost{
+       color:white;
+       position: absolute;
+       top:500px;
+       left:150px;
+       font-size: 20px;
+   }
+   #tobby{
+     width:125px;
+     height:125PX;
+     position: absolute;
+     top:5px;
+     left: 1250px;
+     
+   }
+   #tobbycost{
+      color:white;
+      position: absolute;
+      top: 125px;
+      left:1250px;
+   }
