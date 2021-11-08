@@ -23,6 +23,7 @@
        var score = 0;
        var img= document.getElementById("blackhole")
        img.addEventListener("click",imgclick)
+       var cost=25;
     
 function imgclick(){
        score=score +1;
@@ -40,25 +41,13 @@ function imgclick(){
 
  
  function upgrade(){
-     if(score>25){
+     if(score>24){
           
-     scoreperinterval=scoreperinterval+1
-     score= score-25
+     scoreperinterval=scoreperinterval+2
+     score= score-cost
+     cost=cost+25
      }
-     if(score>50){
-         scoreperinterval= scoreperinterval +2
-         score= score -50
-     }
-     if(score>150){
-         scoreperinterval=scoreperinterval+10
-         score=score-150
-         if(score>350){
-             scroeperinterval=scoreperinterval +25
-             score= score-500
-         }
-            
-         
-     }
+     
 
  }
  
