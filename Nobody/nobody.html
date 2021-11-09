@@ -38,7 +38,10 @@
 <script>
     var paper=0;
     var paperperinterval=0;
-    var jimcost= 25;
+    var jimcost= 24;
+    var dwightcost=49;
+    var stanleycost= 199;
+    var kevincost=499;
     document.getElementById("jim").addEventListener("click",jim)
     
     document.getElementById("dwight").addEventListener("click",dwight)
@@ -61,7 +64,7 @@
          
          paperperinterval=paperperinterval +1
          paper=paper-jimcost
-         jimcost=jimcost *5
+        jimcost=Math.round(jimcost*1.5)
         
         
      }
@@ -70,17 +73,20 @@
      if(paper >49){
          paperperinterval=paperperinterval+5
          paper=paper-50
+         dwightcost=dwightcost *1.5
      }
  }
  function stanley(){
       if(paper >199){
-              paperperinterval=paperperinterval+10
+              paperperinterval=paperperinterval+20
               paper=paper-200
+              stanleycost=stanleycost*1.5
       }
  }function kevin(){
      if(paper>999){
-              paperperinterval=paperperinterval+25
+              paperperinterval=paperperinterval+100
               paper=paper-1000
+              kevincost=kevincost*1.5
      }
  }
 
