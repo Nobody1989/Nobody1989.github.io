@@ -4,6 +4,7 @@ body{
  background-size:cover;
 
 }
+
 #office{
     width:150px;
     height:150px;
@@ -13,32 +14,31 @@ body{
   position: relative;
   top:5px;
   }
+
   #jim{
     width:125px;
     height: 125px;
     position: absolute;
-    top: 5px;
+    top: 150px;
     
   }
+
   #dwight{
     height:125px;
     width: 125px;
     position:absolute;
-    top:150px;
+    top:300px;
     
   }
+
    #stanley{
          height:125px;
          width:125px;
          position:absolute;
-         top:300px;
+         top:5px;
   }
-  #kevin{
-    height:125px;
-    width:125px;
-    position: absolute;
-    top:500px;
-  }
+  
+  
   h1{
     margin: auto;
   width: 12%;
@@ -47,6 +47,7 @@ body{
   color:white;
   font-size:40;
   }
+
   #paper{
     color:white;
     font-size: 20px;
@@ -58,37 +59,34 @@ body{
     
 
   }
+
   #jimcost{
     position:absolute;
-    top: 5px;
+    top: 150px;
     left:150px;
     color:white;
     font-size: 20px;
     float: right;
   }
+
    #dwightcost{
-     color:white;
-     position: absolute;
-     top:150px;
-     left:150px;
-     font-size: 20px;
-   }
-   #stanleycost{
      color:white;
      position: absolute;
      top:300px;
      left:150px;
      font-size: 20px;
+   }
+
+   #stanleycost{
+     color:white;
+     position: absolute;
+     top:5px;
+     left:150px;
+     font-size: 20px;
 
 
    }
-   #kevincost{
-       color:white;
-       position: absolute;
-       top:500px;
-       left:150px;
-       font-size: 20px;
-   }
+   
    #tobby{
      width:125px;
      height:125PX;
