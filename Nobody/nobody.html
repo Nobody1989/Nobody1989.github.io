@@ -28,9 +28,11 @@
             <div id="tobbycost">
                 cost 2000
             </div>
+            <img src="https://tv-fanatic-res.cloudinary.com/iu/s--6gVAPueT--/t_medium/cs_srgb,f_auto,fl_strip_profile.lossy,q_auto:420/v1371560132/oscar-martinez.png" id="oscar">
             
-           
-
+   <div id="oscarcost">
+       cost 100
+   </div>
 </html>
 <script>
     var paper=0;
@@ -38,17 +40,20 @@
     var jimcost= 49;
     var dwightcost=74;
     var stanleycost= 24;
+    var oscarcost=99;
     
     document.getElementById("jim").addEventListener("click",jim)
     
     document.getElementById("dwight").addEventListener("click",dwight)
     document.getElementById("stanley").addEventListener("click",stanley)
     document.getElementById("tobby").addEventListener("click",tobby)
+    document.getElementById("oscar").addEventListener("click",oscar)
+    
     
 
       function counter(){
         paper = paper + 1;
-        count.innerHTML=count
+        document.getElementById("paper").innerText=count
     }
     setInterval(update,500)
  function update(){
@@ -61,7 +66,8 @@
          
          paperperinterval=paperperinterval +5
          paper=paper-jimcost
-        jimcost=Math.round(jimcost*1.5)
+        jimcost=Math.round(jimcost*3.5)
+        document.getElementById("jimcost").innerText = jimcost
        
         
         
@@ -71,15 +77,22 @@
      if(paper >dwightcost){
          paperperinterval=paperperinterval+10
          paper=paper-dwightcost
-         dwightcost=dwightcost *1.5
+         dwightcost=Math.round(dwightcost *3.5)
+         document.getElementById("dwightcost").innerText = dwightcost
      }
  }
  function stanley(){
       if(paper >stanleycost){
               paperperinterval=paperperinterval+1
               paper=paper-stanleycost
-              stanleycost=stanleycost*1.5
+              stanleycost=Math.round(stanleycost*3.5)
+              document.getElementById("stanleycost").innerText = stanleycost
       }
+    }
+    function oscar(){
+        if(paper>oscarcost){
+                      
+        }
     }
  
 

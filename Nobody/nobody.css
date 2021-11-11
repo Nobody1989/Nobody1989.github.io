@@ -37,7 +37,13 @@ body{
          position:absolute;
          top:5px;
   }
-  
+  #oscar{
+    height:125px;
+    width:125px;
+    position:absolute;
+    left:0px;
+    top:475px;
+  }
   
   h1{
     margin: auto;
@@ -85,6 +91,13 @@ body{
      font-size: 20px;
 
 
+   }
+   #oscarcost{
+     color:white;
+     position: absolute;
+     top:475px;
+     left:150px;
+     font-size:20px;
    }
    
    #tobby{
