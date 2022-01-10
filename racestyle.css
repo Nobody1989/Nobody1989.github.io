@@ -1,0 +1,12 @@
+img{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+}
+#a{
+    top:150px;
+    left:0px;
+}             
+#b{
+    left:0px;
+}

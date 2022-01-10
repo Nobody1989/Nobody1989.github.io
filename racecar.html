@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="racestyle.css">
+    </head>
+    <body>
+        <img src="https://static01.nyt.com/images/2020/03/05/multimedia/05sp-EUROPEAN-INYT1/05sp-EUROPEAN-INYT1-mediumSquareAt3X-v3.jpg" id="b">
+        <img src="https://www.gannett-cdn.com/media/2018/05/22/USATODAY/USATODAY/636626138283492648-flag7-Mike-20and-20Gail-20Boettcher-20-Small-.jpg?width=2560" id="a">
+    </body>
+</html>
+<script>
+    var a = document.getElementById("a")
+    var b = document.getElementById("b")
+    var x = 0
+    document.addEventListener("keydown",keydownhandler)
+
+    function keydownhandler(e){
+        if("d" === e.key){
+                  a.style.left= x +"px"
+                  x= x+5
+        }
+    }
+</script>
