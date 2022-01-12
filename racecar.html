@@ -12,12 +12,24 @@
     var a = document.getElementById("a")
     var b = document.getElementById("b")
     var x = 0
+    var xx = 0
     document.addEventListener("keydown",keydownhandler)
-
+    
     function keydownhandler(e){
         if("d" === e.key){
                   a.style.left= x +"px"
-                  x= x+5
+                  x= x+20
         }
+        if("l"=== e.key){
+            b.style.left= xx +"px"
+            xx= xx+20
+        }
+        document.addEventListener(screen.width)
+        alert ("congragulatiion")
+        
     }
+    
+    
+    
+
 </script>
