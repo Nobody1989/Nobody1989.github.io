@@ -11,24 +11,30 @@
 <script>
     var a = document.getElementById("a")
     var b = document.getElementById("b")
-    var x = 0
-    var xx = 0
-    document.addEventListener("keydown",keydownhandler)
+    var x1 = 0
+    var x2 = 0
+    document.addEventListener("keyup",keydownhandler)
     
     function keydownhandler(e){
         if("d" === e.key){
-                  a.style.left= x +"px"
-                  x= x+20
+                  b.style.left= x1 +"px"
+                  x1= x1+50
+
+           if(x1 > window.innerWidth){
+            alert(" b wins")
         }
-        if("l"=== e.key){
-            b.style.left= xx +"px"
-            xx= xx+20
-        }
-        document.addEventListener(screen.width)
-        alert ("congragulatiion")
-        
     }
-    
+          if("l"=== e.key){
+            a.style.left= x2 +"px"
+            x2= x2+50
+
+
+          if(x2 > window.innerWidth){
+          alert("a wins")
+        }
+    }
+}
+        
     
     
 
