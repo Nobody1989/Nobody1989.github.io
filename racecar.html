@@ -4,8 +4,10 @@
         <link rel="stylesheet" href="racestyle.css">
     </head>
     <body>
+        <h2 id="c">time:0</h2>
         <img src="https://static01.nyt.com/images/2020/03/05/multimedia/05sp-EUROPEAN-INYT1/05sp-EUROPEAN-INYT1-mediumSquareAt3X-v3.jpg" id="b">
         <img src="https://www.gannett-cdn.com/media/2018/05/22/USATODAY/USATODAY/636626138283492648-flag7-Mike-20and-20Gail-20Boettcher-20-Small-.jpg?width=2560" id="a">
+
     </body>
 </html>
 <script>
@@ -13,8 +15,16 @@
     var b = document.getElementById("b")
     var x1 = 0
     var x2 = 0
+    var c = 0
     document.addEventListener("keyup",keydownhandler)
-    
+    setInterval(update, 100)
+       function update(){ 
+           c=c+ 0.10
+    document.getElementById("c").innerHTML = "time:" + c.toFixed(2) + "sceonds"
+ 
+    }
+           
+
     function keydownhandler(e){
         if("d" === e.key){
                   b.style.left= x1 +"px"

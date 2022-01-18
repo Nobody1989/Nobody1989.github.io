@@ -4,9 +4,13 @@ img{
     position: absolute;
 }
 #a{
-    top:150px;
+    top:350px;
     left:0px;
 }             
 #b{
+    top:150px;
     left:0px;
+}
+h2{
+    text-align: center;
 }
