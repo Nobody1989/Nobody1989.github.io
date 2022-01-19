@@ -16,7 +16,11 @@
     var x1 = 0
     var x2 = 0
     var c = 0
+    var x1add= 0
+    var x2add =0
+
     document.addEventListener("keyup",keydownhandler)
+    
     setInterval(update, 100)
        function update(){ 
            c=c+ 0.10
@@ -27,16 +31,20 @@
 
     function keydownhandler(e){
         if("d" === e.key){
+            x1=x1+x1add
+            x1add =x1add +.2
                   b.style.left= x1 +"px"
-                  x1= x1+50
+                  
 
            if(x1 > window.innerWidth){
             alert(" b wins")
         }
     }
           if("l"=== e.key){
+              x2=x2+x2add
+              x2add= x2add +.2
             a.style.left= x2 +"px"
-            x2= x2+50
+            x2= x2 +xadd
 
 
           if(x2 > window.innerWidth){
@@ -44,7 +52,18 @@
         }
     }
 }
-        
+    setInterval(car,10)
+    function car(){
+            
+                a.style.left = x2 + "px"
+                x2 = x2 + x2add
+                lPressed = true
+           
+                 b.style.left = x1 + "px"
+                  x1 = x1 + x1add
+                   dPressed = true
+            
+    }    
     
     
 
