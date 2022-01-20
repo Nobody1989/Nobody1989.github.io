@@ -9,7 +9,7 @@
         <h1>
             Race
         </h1>
-        <h2>
+        <h2 Id = "time">
             time:0
     
         </h2>
@@ -25,6 +25,7 @@
     var x2 = 0
     var x1a = 0
     var x2a = 0
+    var time = 0
     document.addEventListener("keyup",keydownhandler)
     function keydownhandler(e){
         if("d" === e.key){
@@ -56,6 +57,9 @@
                   x2 = x2 + x2a
     }
             
-        
-     
+    setInterval(update, 100)
+       function update(){ 
+           time=time+ 0.10
+    document.getElementById("time").innerHTML = "time:" + time.toFixed(2) + "sceonds"
+       }
 </script>
