@@ -29,37 +29,45 @@
     document.addEventListener("keyup",keydownhandler)
     function keydownhandler(e){
         if("d" === e.key){
-            x1 = x1 + x1a
+           
             x1a = x1a +.2
-            banna.style.left = x1 +"px"
+            
         }
         if(x1 > 1200){
               alert("Banna Car Wins")
         }
         if( "l"=== e.key){
-            x2 =x2 +x2a
+            
             x2a =x2a +.2
-            hotdog.style.left = x2 +"px"
+            
 
         }
         if(x2> 1200){
             alert( "Hotdog Car Wins")
         }
+        
     }
     setInterval(car,10)
     function car(){
             
-                banna.style.left = x1 + "px"
+        banna.style.left = x1 + "px"
                 x1 = x1 + x1a
-                
-                           
+                if(x1a > 0){
+                    x1a = x1a - .007
+                }
+                if(x1a < 0){
+                         x1a =0
+                }
+           
                  hotdog.style.left = x2 + "px"
                   x2 = x2 + x2a
+                   
     }
             
     setInterval(update, 100)
        function update(){ 
            time=time+ 0.10
     document.getElementById("time").innerHTML = "time:" + time.toFixed(2) + "sceonds"
+
        }
 </script>
