@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="carstyle.css">
+    </head>
+    <body>
+        <img src="https://m5.paperblog.com/i/127/1277703/top-10-crazy-banana-cars-with-real-appeal-L-iMZLNi.jpeg" Id="banna">
+        <img src="https://2lz8iu19k09n13d61e3d2mb0-wpengine.netdna-ssl.com/wp-content/uploads/2020/01/weiner3.0.jpg" Id="hotdog">
+        <h1>
+            Race
+        </h1>
+        <h2>
+            time:0
+    
+        </h2>
+        <div Id="line">
+
+        </div>
+    </body>
+</html>
+<script>
+    var banna = document.getElementById("banna")
+    var hotdog = document.getElementById("hotdog")
+    var x1 = 0
+    var x2 = 0
+    var x1a = 0
+    var x2a = 0
+    document.addEventListener("keyup",keydownhandler)
+    function keydownhandler(e){
+        if("d" === e.key){
+            x1 = x1 + x1a
+            x1a = x1a +.2
+            banna.style.left = x1 +"px"
+        }
+        if(x1 > 1200){
+              alert("Banna Car Wins")
+        }
+        if( "l"=== e.key){
+            x2 =x2 +x2a
+            x2a =x2a +.2
+            hotdog.style.left = x2 +"px"
+
+        }
+        if(x2> 1200){
+            alert( "Hotdog Car Wins")
+        }
+    }
+    setInterval(car,10)
+    function car(){
+            
+                banna.style.left = x1 + "px"
+                x1 = x1 + x1a
+                
+                           
+                 hotdog.style.left = x2 + "px"
+                  x2 = x2 + x2a
+    }
+            
+        
+     
+</script>
