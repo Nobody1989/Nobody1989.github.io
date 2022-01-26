@@ -3,7 +3,7 @@
     height:50px; 
     background-color: red;
     position:absolute;
-    animation-name: box;
+    animation-name: 2box;
     animation-duration: 1s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
