@@ -16,6 +16,9 @@
         <div Id="line">
            
         </div>
+        <div Id="bannaw" >
+            banna wins
+        </div>
     </body>
 </html>
 <script>
@@ -27,24 +30,21 @@
     var x2a = 0
     var time = 0
     document.addEventListener("keyup",keydownhandler)
+    
     function keydownhandler(e){
         if("d" === e.key){
            
             x1a = x1a +.2
             
         }
-        if(x1 > 1200){
-              alert("Banna Car Wins")
-        }
+        
         if( "l"=== e.key){
             
             x2a =x2a +.2
             
 
         }
-        if(x2> 1200){
-            alert( "Hotdog Car Wins")
-        }
+        
         
     }
     setInterval(car,10)
@@ -58,7 +58,9 @@
                 if(x1a < 0){
                          x1a =0
                 }
-           
+                if(x1 > 1200){
+                  Document.getElementById("bannaw").style.
+                }
                  hotdog.style.left = x2 + "px"
                   x2 = x2 + x2a
                   if(x2a > 0){
@@ -69,7 +71,8 @@
                 }
                    
     }
-            
+               
+           
     setInterval(update, 100)
        function update(){ 
            time=time+ 0.10
