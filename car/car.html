@@ -1,82 +1,106 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <link rel="stylesheet" href="carstyle.css">
-    </head>
-    <body>
-        <img src="http://i2.wp.com/theverybesttop10.com/wp-content/uploads/2015/07/Top-10-Crazy-Banana-Cars-With-Real-Appeal-9.jpg?resize=510%2C320" Id="banna">
-        <img src="https://2lz8iu19k09n13d61e3d2mb0-wpengine.netdna-ssl.com/wp-content/uploads/2020/01/weiner3.0.jpg" Id="hotdog">
-        <h1>
-            Race
-        </h1>
-        <h2 Id = "time">
-            time:0
-    
-        </h2>
-        <div Id="line">
-           
-        </div>
-        <div Id="bannaw" >
-            banna wins
-        </div>
-    </body>
+
+<head>
+    <link rel="stylesheet" href="carstyle.css">
+</head>
+
+<body>
+    <img src="http://i2.wp.com/theverybesttop10.com/wp-content/uploads/2015/07/Top-10-Crazy-Banana-Cars-With-Real-Appeal-9.jpg?resize=510%2C320"
+        Id="banna">
+    <img src="https://2lz8iu19k09n13d61e3d2mb0-wpengine.netdna-ssl.com/wp-content/uploads/2020/01/weiner3.0.jpg"
+        Id="hotdog">
+    <h1>
+        Race
+    </h1>
+    <h2 Id="time">
+        time:0
+
+    </h2>
+    <div Id="line">
+
+    </div>
+    <div Id="bannaw">
+        banna wins
+    </div>
+    <div Id="hotdogw">
+        Hotdog wins
+    </div>
+</body>
+
 </html>
 <script>
-    var banna = document.getElementById("banna")
-    var hotdog = document.getElementById("hotdog")
+    var banna = document.getElementById("bannaw").addEventListener("click", reset)
+    var hotdog = document.getElementById("hotdogw").addEventListener("click", reset)
     var x1 = 0
     var x2 = 0
     var x1a = 0
     var x2a = 0
     var time = 0
-    document.addEventListener("keyup",keydownhandler)
-    
-    function keydownhandler(e){
-        if("d" === e.key){
-           
-            x1a = x1a +.2
-            
-        }
-        
-        if( "l"=== e.key){
-            
-            x2a =x2a +.2
-            
+
+
+    document.addEventListener("keyup", keydownhandler)
+
+    function keydownhandler(e) {
+        if ("d" === e.key) {
+
+            x1a = x1a + .2
 
         }
-        
-        
+
+        if ("l" === e.key) {
+
+            x2a = x2a + .2
+
+
+        }
+
+
     }
-    setInterval(car,10)
-    function car(){
-            
-        banna.style.left = x1 + "px"
-                x1 = x1 + x1a
-                if(x1a > 0){
-                    x1a = x1a - .005
-                }
-                if(x1a < 0){
-                         x1a =0
-                }
-                if(x1 > 1200){
-                  Document.getElementById("bannaw").style.
-                }
-                 hotdog.style.left = x2 + "px"
-                  x2 = x2 + x2a
-                  if(x2a > 0){
-                    x2a = x2a - .005
-                }
-                if(x2a < 0){
-                         x2a =0
-                }
-                   
+    setInterval(car, 10)
+    function car() {
+
+        document.getElementById("banna").style.left = "" + x1 + "px"
+        x1 = x1 + x1a
+        if (x1a > 0) {
+            x1a = x1a - .005
+        }
+        if (x1a < 0) {
+            x1a = 0
+        }
+        if (x1 >= 1200) {
+            document.getElementById("bannaw").style.display = "block"
+        }
+        document.getElementById("hotdog").style.left = x2 + "px"
+        x2 = x2 + x2a
+        if (x2a > 0) {
+            x2a = x2a - .005
+        }
+        if (x2a < 0) {
+            x2a = 0
+        }
+        if (x2 >= 1200) {
+            document.getElementById("hotdogw").style.display = "block"
+        }
+
     }
-               
-           
+
+
     setInterval(update, 100)
-       function update(){ 
-           time=time+ 0.10
-    document.getElementById("time").innerHTML = "time:" + time.toFixed(2) + "sceonds"
+    function update() {
+        time = time + 0.10
+        document.getElementById("time").innerHTML = "time:" + time.toFixed(2) + "sceonds"
 
-       }
+    }
+    function reset() {
+        x1 = 0
+        x2 = 0
+        x1a = 0
+        x2a = 0
+        time = 0
+        document.getElementById("banna").style.left = "0px";
+        document.getElementById("hotdog").style.left = "0px";
+        document.getElementById("bannaw").style.display = "none"
+        document.getElementById("hotdogw").style.display = "none"
+    }
 </script>
