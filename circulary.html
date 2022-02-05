@@ -22,8 +22,8 @@
     var x = 0
     var y = 0
 
-    var speedx = 100
-    var speedy = 100
+    var speedx = 25
+    var speedy = 25
      
     canvas.width = innerWidth
     canvas.height = innerHeight
@@ -31,6 +31,7 @@
 
     setInterval(update, 50)
     function update() {
+      
         ctx.beginPath()
         ctx.arc(x,y,50,0,2*Math.PI)
         ctx.fill()

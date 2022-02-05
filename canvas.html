@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+     <link rel="stylesheet" href="canvasstyle.css">
+
+
+    </head>
+    <body>
+        
+        <canvas></canvas>
+    </body>
+</html>
+<script>
+  var canvas = document.querySelector("canvas")
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+  var c = canvas.getContext("2d");
+  //rectangle
+  //c.fillStyle = " purple"
+  //c.fillRect(100,100,100,100)
+  //c.fillStyle ="red";
+  //c.fillRect(400,100,100,100)
+  //c.fillStyle ="green";
+  //c.fillRect(300,300,100,100)
+  
+  //line
+  //c.beginPath();
+  //c.moveTo(50,300);
+  //c.lineTo(300,100);
+  //c.lineTo(400,300);
+  //c.strokeStyle = "red"
+  //c.stroke();
+  //arc
+ // for( var i = 0; i<10;i++){
+      //var x = Math.random() * window.innerWidth;
+      //var y = Math.random()* window.innerHeight;
+//c.beginPath();
+ // c.arc(x,y,50,0,2*Math.PI)
+ // c.strokeStyle ="blue";
+//c.stroke();
+
+ // }
+ 
+ var x = Math.random()* innerWidth - 100;
+ var y = Math.random()* innerHeight-100;
+ var dx = (Math.random() -.5)*10;
+ var dy = (Math.random() -.5)*10;
+ function animate(){
+     requestAnimationFrame(animate);
+     c.clearRect(0,0, innerWidth,innerHeight)
+     
+  c.beginPath();
+  c.arc(x,y,50,0, 2*Math.PI)
+  c.fill();
+  c.fillStyle="blue";
+  c.strokeStyle ="blue";
+  c.stroke();
+  x = x + dx
+  y = y +dy
+  if(x > innerWidth -50){
+      dx =-dx
+  }
+  if(x  -30 <0 ){
+      dx = - dx;
+  }
+  if(y > innerHeight-50){
+      dy= -dy
+  }
+  if(y -30 < 0 ){
+      dy = -dy
+  }
+  
+  
+  
+ }
+ animate();
+</script>
