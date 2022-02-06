@@ -16,13 +16,10 @@
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
   var c = canvas.getContext("2d");
-  //rectangle
-  //c.fillStyle = " purple"
-  //c.fillRect(100,100,100,100)
-  //c.fillStyle ="red";
-  //c.fillRect(400,100,100,100)
-  //c.fillStyle ="green";
-  //c.fillRect(300,300,100,100)
+ // rectangle
+  c.fillStyle = " purple"
+  c.fillRect(100,100,100,100)
+  
   
   //line
   //c.beginPath();
@@ -46,10 +43,11 @@
  var y = Math.random()* innerHeight-100;
  var dx = (Math.random() -.5)*10;
  var dy = (Math.random() -.5)*10;
+ 
  function animate(){
      requestAnimationFrame(animate);
      c.clearRect(0,0, innerWidth,innerHeight)
-     
+     for(var i=0;i<6;i[- i+1]){
   c.beginPath();
   c.arc(x,y,50,0, 2*Math.PI)
   c.fill();
@@ -71,8 +69,11 @@
       dy = -dy
   }
   
+     }
   
-  
- }
+}
+
+
  animate();
+ 
 </script>
