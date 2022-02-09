@@ -7,7 +7,7 @@
 
 <body>
 
-    <canvas id="canvas" width="600" height="600"></canvas>
+  <canvas id="canvas" width="600" height="600"></canvas>
 
 
 
@@ -16,50 +16,56 @@
 
 </html>
 <script>
-    document.getElementById("canvas");
-    var ctx = canvas.getContext("2d");
-  
-    var x = Math.random()* innerWidth - 50;
-    var y = Math.random()* innerHeight- 50;
+  document.getElementById("canvas");
+  var ctx = canvas.getContext("2d");
 
-    var speedx =  Math.random()*20-10;
-    var speedy = Math.random() *20- 10;
-    
-     
-    canvas.width = innerWidth
-    canvas.height = innerHeight
-    ctx.fillStyle="red";
+  var x = [100, 300, 500]
+  var y = [500, 400, 250]
 
-    setInterval(update, 20)
-    function update() {
-      ctx.clearRect(0,0,10000,10000)
-        ctx.beginPath()
-        ctx.arc(x,y,50,0,2*Math.PI)
-        ctx.fill()
-        ctx.stroke()
-        
+  var speedx = [50, 25, 10]
+  var speedy = [35, 25, 10]
+  var r = [25, 50, 100]
 
-       x= x +speedx
-       y= y +speedy
-       if(x>= window.innerWidth -100){
-              speedx= speedx
-        speedx = -speedx
-        ctx.fillStyle="hsl("+Math.random()*360+",100%,50%)"
-       } 
-       if(x<=0 ){
-         speedx= -speedx
-         ctx.fillStyle="hsl("+Math.random()*360+",100%,50%)"
-       }
 
-        if (y>=window.innerHeight -100){
-          speedy=speedy
-          speedy=-speedy
-          ctx.fillStyle="hsl("+Math.random()*360+",100%,50%)"
-        }
-        if(y <=0 ) {
-             speedy=-speedy
-             ctx.fillStyle="hsl("+Math.random()*360+",100%,50%)"
-        } 
-    
+  canvas.width = innerWidth
+  canvas.height = innerHeight
+  ctx.fillStyle = "red";
+
+  setInterval(update, 20)
+  function update() {
+    ctx.clearRect(0, 0, 10000, 10000)
+    for (var i = 0; i < 3; i ++) {
+      ctx.beginPath();
+      ctx.arc(x[i], y[i], r[i], 0, 2 * Math.PI);
+      
+      ctx.fill();
+      x [i]= x[i] + speedx[i]
+    y[i] = y [i]+ speedy[i]
+    if (x [i]>= window.innerWidth - 100) {
+      speedx[i] = speedx[i]
+      speedx[i] = -speedx[i]
+      ctx.fillStyle = "hsl(" + Math.random() * 360 + ",100%,50%)"
     }
+    if (x[i] <= 0) {
+      speedx[i] = -speedx[i]
+      ctx.fillStyle = "hsl(" + Math.random() * 360 + ",100%,50%)"
+    }
+
+    if (y [i]>= window.innerHeight - 100) {
+      speedy [i]= speedy[i]
+      speedy [i]= -speedy[i]
+      ctx.fillStyle = "hsl(" + Math.random() * 360 + ",100%,50%)"
+    }
+    if (y [i]<= 0) {
+      speedy[i] = -speedy[i]
+      ctx.fillStyle = "hsl(" + Math.random() * 360 + ",100%,50%)"
+    }
+    
+
+
+  }
+
+    }
+
+    
 </script>
