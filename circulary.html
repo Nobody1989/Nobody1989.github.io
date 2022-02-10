@@ -19,22 +19,28 @@
   document.getElementById("canvas");
   var ctx = canvas.getContext("2d");
 
-  var x = [100, 300, 500]
-  var y = [500, 400, 250]
+  var x = []
+  var y = []
 
-  var speedx = [50, 25, 10]
-  var speedy = [35, 25, 10]
-  var r = [25, 50, 100]
-
-
-  canvas.width = innerWidth
+  var speedx = []
+  var speedy = []
+  var r = []
+  for(var i=0;i<100;i=i+1){
+            x.push(Math.random()*100)
+            y.push(Math.random()*100)
+            speedx.push(Math.random()*20)
+            speedy.push(Math.random()*20)
+            r.push(Math.random()*50)
+      }
+     canvas.width = innerWidth
   canvas.height = innerHeight
   ctx.fillStyle = "red";
 
   setInterval(update, 20)
   function update() {
     ctx.clearRect(0, 0, 10000, 10000)
-    for (var i = 0; i < 3; i ++) {
+    for (var i = 0; i < 100; i ++) {
+      
       ctx.beginPath();
       ctx.arc(x[i], y[i], r[i], 0, 2 * Math.PI);
       
@@ -45,7 +51,11 @@
       speedx[i] = speedx[i]
       speedx[i] = -speedx[i]
       ctx.fillStyle = "hsl(" + Math.random() * 360 + ",100%,50%)"
+      
+
     }
+
+
     if (x[i] <= 0) {
       speedx[i] = -speedx[i]
       ctx.fillStyle = "hsl(" + Math.random() * 360 + ",100%,50%)"
