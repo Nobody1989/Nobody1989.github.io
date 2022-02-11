@@ -2,12 +2,12 @@
 <html>
 
 <head>
-<style>
-  canvas{
-    background-color: black; 
+  <style>
+    canvas {
+      background-color: black;
 
-  }
-</style>
+    }
+  </style>
 </head>
 
 <body>
@@ -30,26 +30,31 @@
   var speedx = []
   var speedy = []
   var r = []
-  var c =[]
+  var c = []
 
   for (var i = 0; i < 1; i = i + 1) {
     x.push(Math.random() * window.innerWidth - 25)
     y.push(Math.random() * window.innerHeight - 25)
-    speedx.push(Math.random() * 10)
-    speedy.push(Math.random() * 10)
-    r.push(Math.random() * 50)
-    
+    speedx.push(Math.random() * 25)
+    speedy.push(Math.random() * 25)
+    r.push(Math.random() * 75)
+
   }
   canvas.width = innerWidth
   canvas.height = innerHeight
   //ctx.fillStyle = "red";
-  document.getElementById("canvas").addEventListener("click",balls)
-  function balls(){
-    x.push(Math.random() * window.innerWidth-100)
-    y.push(Math.random() * window.innerHeight-100)
-    speedx.push(Math.random() * 10)
-    speedy.push(Math.random() * 10)
-    r.push(Math.random() * 50+25)
+  document.getElementById("canvas").addEventListener("click", balls)
+  function balls() {
+    var e = window.event
+    x.push(e.clientX)
+    y.push(e.clientY)
+    speedx.push(Math.random() * 25)
+    speedy.push(Math.random() * 25)
+    r.push(Math.random() * 50 + 25)
+    document.value =x;
+    document.value = y;
+
+
 
   }
 
@@ -57,17 +62,18 @@
   function update() {
     ctx.clearRect(0, 0, 10000, 10000)
     for (var i = 0; i < x.length; i++) {
-     // canvas.style.backgroundColor = "hsl(" + Math.random() * 360 + ",100%,50%)"
+      //  canvas.style.backgroundColor = "hsl(" + Math.random() * 360 + ",100%,50%)"
       ctx.beginPath();
       ctx.arc(x[i], y[i], r[i], 0, 2 * Math.PI);
-      ctx.fillStyle=c[i];
+      ctx.fillStyle = c[i];
       ctx.fill();
+      ctx.stroke()
       x[i] = x[i] + speedx[i]
       y[i] = y[i] + speedy[i]
-      if (x[i] >= window.innerWidth - 50) {
-        speedx[i] = speedx[i]
+      if (x[i] >= window.innerWidth - 0) {
+
         speedx[i] = -speedx[i]
-        
+
         //ctx.fillStyle = "hsl(" + Math.random() * 360 + ",100%,50%)"
 
 
@@ -76,17 +82,17 @@
       c.push("hsl(" + Math.random() * 360 + ",100%,50%)")
       if (x[i] <= 50) {
         speedx[i] = -speedx[i]
-       // ctx.fillStyle = "hsl(" + Math.random() * 360 + ",100%,50%)"
+        // ctx.fillStyle = "hsl(" + Math.random() * 360 + ",100%,50%)"
       }
 
       if (y[i] >= window.innerHeight - 50) {
-        speedy[i] = speedy[i]
+
         speedy[i] = -speedy[i]
-       // ctx.fillStyle = "hsl(" + Math.random() * 360 + ",100%,50%)"
+        // ctx.fillStyle = "hsl(" + Math.random() * 360 + ",100%,50%)"
       }
-      if (y[i] <= 50) {
+      if (y[i] <= 0) {
         speedy[i] = -speedy[i]
-       // ctx.fillStyle = "hsl(" + Math.random() * 360 + ",100%,50%)"
+        // ctx.fillStyle = "hsl(" + Math.random() * 360 + ",100%,50%)"
       }
 
 
