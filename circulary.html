@@ -31,21 +31,22 @@
   var speedy = []
   var r = []
   var c =[]
+
   for (var i = 0; i < 1; i = i + 1) {
     x.push(Math.random() * window.innerWidth - 25)
     y.push(Math.random() * window.innerHeight - 25)
     speedx.push(Math.random() * 10)
     speedy.push(Math.random() * 10)
     r.push(Math.random() * 50)
-    c.push("hsl(" + Math.random() * 360 + ",100%,50%)")
+    
   }
   canvas.width = innerWidth
   canvas.height = innerHeight
   //ctx.fillStyle = "red";
   document.getElementById("canvas").addEventListener("click",balls)
   function balls(){
-    x.push(Math.random() * window.innerWidth - 25)
-    y.push(Math.random() * window.innerHeight - 25)
+    x.push(Math.random() * window.innerWidth-100)
+    y.push(Math.random() * window.innerHeight-100)
     speedx.push(Math.random() * 10)
     speedy.push(Math.random() * 10)
     r.push(Math.random() * 50+25)
@@ -63,21 +64,22 @@
       ctx.fill();
       x[i] = x[i] + speedx[i]
       y[i] = y[i] + speedy[i]
-      if (x[i] >= window.innerWidth - 25) {
+      if (x[i] >= window.innerWidth - 50) {
         speedx[i] = speedx[i]
         speedx[i] = -speedx[i]
+        
         //ctx.fillStyle = "hsl(" + Math.random() * 360 + ",100%,50%)"
 
 
       }
 
-
+      c.push("hsl(" + Math.random() * 360 + ",100%,50%)")
       if (x[i] <= 50) {
         speedx[i] = -speedx[i]
        // ctx.fillStyle = "hsl(" + Math.random() * 360 + ",100%,50%)"
       }
 
-      if (y[i] >= window.innerHeight - 25) {
+      if (y[i] >= window.innerHeight - 50) {
         speedy[i] = speedy[i]
         speedy[i] = -speedy[i]
        // ctx.fillStyle = "hsl(" + Math.random() * 360 + ",100%,50%)"
