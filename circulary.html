@@ -57,7 +57,7 @@
 
 
   }
-
+  
   setInterval(update, 30)
   function update() {
     ctx.clearRect(0, 0, 10000, 10000)
@@ -98,13 +98,19 @@
         // ctx.fillStyle = "hsl(" + Math.random() * 360 + ",100%,50%)"
       }
       for (var j = 0; j < x.length; j = j +1) {
-      if (x[i] === x[j]) {
-        if(){
-
-        speedx[j] = -speedx[i] 
-        speedy[j] = -speedy[i] 
-
+      if (  i!==j) {
+        if(x[i]=== x[j]){
+             if(Math.sqrt((x[i]+x[j])+(y[i]+y[j]))>=r[i]+r[j]){
+               tempx=speedx[i]
+               tempy=speedy[i]
+        speedx[i] = speedx[j] 
+        speedy[i] = speedy[j] 
+        tempx=speedx[j]
+        tempy=speedy[j]
+             }
         }
+
+        
         
       }
 
